@@ -17,10 +17,16 @@
   <script type="text/javascript" src="js/vlist.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
+  
+  
+  <div id="topbar">
+    <a href="https://learningequality.org/about/values/">LearningEquality</a>
+  </div>
+
   <script>
-    var list = new VirtualList({
-      w: 200,
-      h: window.innerHeight,
+      var list = new VirtualList({
+      w: window.innerWidth/6,
+      h: window.innerHeight *3,
       itemHeight: 31,
       totalRows: 10000,
 
@@ -28,19 +34,20 @@
         var el = document.createElement("div");
         el.innerHTML = "ITEM " + row;
         el.style.borderBottom = "1px solid red";
-        el.style.position = "absolute"
+        el.style.position = "absolute";
         return el;
       }
     });
-    document.body.appendChild(list.container);
-  </script>
-
-  <div id="topbar">
-    <a href="https://learningequality.org/about/values/">LearningEquality</a>
-  </div>
     
-  <div id="w">
+    document.body.appendChild(list.container);
+      </script>
+ 
+  <div id="w" class ="container-fluid">
+    <div id = "list_column" >
+       
+    </div>
     <div id="content">
+
       <nav id="stickynav">
         <ul id="nav" class="clearfix">
           <li><a class="nva" href="#topbar">Intro</a></li>

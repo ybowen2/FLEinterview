@@ -117,7 +117,10 @@ img { border: 0; max-width: 100%; }
   color: #000;
 }
 
-
+#list-column
+{
+float: left;
+}
 .section {
   padding-top: 90px;
 }

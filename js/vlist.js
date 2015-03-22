@@ -124,20 +124,29 @@ VirtualList.prototype._renderChunk = function(node, from) {
   // Hide and mark obsolete nodes for deletion.
   for (var j = 1, l = node.childNodes.length; j < l; j++) {
     node.childNodes[j].style.display = 'none';
-    node.childNodes[j].setAttribute('data-rm', '1');
+    node.childNodes[j].setAttribute('data-rm', '2');
   }
   node.appendChild(fragment);
 };
 
 VirtualList.createContainer = function(w, h) {
   var c = document.createElement('div');
-  c.className = "list_container";
+  c.className="container_fluid";
   c.style.width = w;
+  c.id = "collapse_list";
   c.style.height = h;
   c.style.overflow = 'auto';
-  c.style.position = 'relative';
+  c.style.position = 'absolute';
   c.style.padding = 0;
   c.style.border = '1px solid black';
+ 
+ 
+/**
+  var d = document.createElement('BUTTON');
+  d.style.width=w;
+  c.appendChild(d);
+  
+*/
   return c;
 };
 
