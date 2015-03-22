@@ -23,10 +23,14 @@
     <a href="https://learningequality.org/about/values/">LearningEquality</a>
   </div>
 
-  <script>
-      var list = new VirtualList({
+<div id = "scrolling">
+
+
+<script type="text/javascript">
+
+        var list = new VirtualList({
       w: window.innerWidth/6,
-      h: window.innerHeight *3,
+      h: window.innerHeight,
       itemHeight: 31,
       totalRows: 10000,
 
@@ -40,8 +44,47 @@
     });
     
     document.body.appendChild(list.container);
-      </script>
  
+
+  </script>
+ <button type="button" id= "list_button"class="btn btn-default">View Scrollable List</button>
+  <script type="text/javascript">
+
+
+  var buttonL = document.getElementById('list_button'); // Assumes element with id='button'
+
+  buttonL.onclick = function() {
+
+    var div = document.getElementById('collapse_list');
+    if (div.style.display !== 'none') {
+        div.style.display = 'none';
+    }
+    else {
+        div.style.display = 'block';
+    }
+};
+
+("#buttonL").click(function() { 
+    // assumes element with id='button'
+    $("#newpost").toggle();
+});
+
+
+  </script> 
+</div>
+
+
+<!--<script type="text/javascript">
+ $(function(){
+      $('#scrolling').slimScroll({
+        color: '#00f',
+    alwaysVisible: true
+    });
+})
+   
+</script>
+   
+ -->
   <div id="w" class ="container-fluid">
     <div id = "list_column" >
        

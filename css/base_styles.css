@@ -197,12 +197,16 @@ a:hover { text-decoration: underline; }
 /** page structure **/
 #w {
   display: block;
-  width: 750px;
+  width: 75%;
   margin: 0 auto;
-  padding-top: 30px;
-  padding-left: 120px;
+  float: right;
+  padding: 5%;
 }
-
+#scrolling
+{
+  width: 100%
+ float: left;
+}
 #content {
   display: block;
   width: 100%;

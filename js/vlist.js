@@ -38,9 +38,9 @@ function VirtualList(config) {
   this.generatorFn = config.generatorFn;
   this.totalRows = config.totalRows || (config.items && config.items.length);
 
-  var scroller = VirtualList.createScroller(itemHeight * this.totalRows);
+  //var scroller = VirtualList.createScroller(itemHeight * this.totalRows);
   this.container = VirtualList.createContainer(width, height);
-  this.container.appendChild(scroller);
+  //this.container.appendChild(scroller);
 
   var screenItemsLen = Math.ceil(config.h / itemHeight);
   // Cache 4 times the number of items that fit in the container viewport
@@ -139,8 +139,7 @@ VirtualList.createContainer = function(w, h) {
   c.style.position = 'absolute';
   c.style.padding = 0;
   c.style.border = '1px solid black';
- 
- 
+  
 /**
   var d = document.createElement('BUTTON');
   d.style.width=w;
