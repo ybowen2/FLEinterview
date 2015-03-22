@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!-- saved from url=(0087)file:///C:/Users/yashnabowen/Documents/introHCI2/FLE-frontend-interview-test/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta tags that set up the page as a mobile page   -->
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, width=device-width">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta charset="UTF-8">
+  <title>FLE Interview Test: font-end</title>
+  <link rel="stylesheet" type="text/css" media="screen,print" href="./FLE Interview Test_ font-end_files/virtualscroll_styles.css">
+  <link rel="stylesheet" type="text/css" href="./FLE Interview Test_ font-end_files/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" media="all" href="./FLE Interview Test_ font-end_files/base_styles.css">
+  <script type="text/javascript" src="./FLE Interview Test_ font-end_files/jquery.min.js"></script>
+  <script type="text/javascript" src="./FLE Interview Test_ font-end_files/jquery.scrollTo.js"></script>
+</head>
+<body>
+  <script type="text/javascript" src="./FLE Interview Test_ font-end_files/vlist.js"></script>
+  <script type="text/javascript" src="./FLE Interview Test_ font-end_files/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./FLE Interview Test_ font-end_files/jquery.slimscroll.min.js"></script>
+  
+  
+  <div id="topbar">
+    <a href="https://learningequality.org/about/values/">LearningEquality</a>
+  </div>
+
+  
+
+
+
+<div id="scrolling">
+<script type="text/javascript">
+
+        var list = new VirtualList({
+      w: window.innerWidth/6,
+      h: window.innerHeight,
+      itemHeight: 31,
+      totalRows: 10000,
+
+      generatorFn: function(row) {
+        var el = document.createElement("div");
+        el.innerHTML = "ITEM " + row;
+        el.id= "list_rows"
+        el.style.borderBottom = "1px solid red";
+        el.style.position = "absolute";
+        return el;
+      }
+    });
+    
+    document.body.appendChild(list.container);
+ 
+
+  </script>
+ <button type="button" id="list_button" class="btn btn-default dropdown-toggle">View Scrollable List</button>
+  
+
+<script type="text/javascript">
+  var buttonL = document.getElementById('list_button'); // Assumes element with id='button'
+
+  buttonL.onclick = function() {
+
+    var div = document.getElementById('collapse_list');
+    if (div.style.display !== 'none') {
+        div.style.display = 'none';
+    }
+    else {
+        div.style.display = 'block';
+    }
+};
+
+("#buttonL").click(function() { 
+    // assumes element with id='button'
+    $("#newpost").toggle();
+});
+   
+</script>
+</div><div class="slimScrollDiv" style="position: absolute; overflow: hidden; width: 250px; height: 775px;"><div class="container_fluid" id="collapse_list" style="width: 250px; height: 775px; overflow: hidden; position: absolute; padding: 0px; border: 1px solid black;"><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 0px;">ITEM 0</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 31px;">ITEM 1</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 62px;">ITEM 2</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 93px;">ITEM 3</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 124px;">ITEM 4</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 155px;">ITEM 5</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 186px;">ITEM 6</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 217px;">ITEM 7</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 248px;">ITEM 8</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 279px;">ITEM 9</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 310px;">ITEM 10</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 341px;">ITEM 11</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 372px;">ITEM 12</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 403px;">ITEM 13</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 434px;">ITEM 14</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 465px;">ITEM 15</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 496px;">ITEM 16</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 527px;">ITEM 17</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 558px;">ITEM 18</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 589px;">ITEM 19</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 620px;">ITEM 20</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 651px;">ITEM 21</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 682px;">ITEM 22</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 713px;">ITEM 23</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 744px;">ITEM 24</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 775px;">ITEM 25</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 806px;">ITEM 26</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 837px;">ITEM 27</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 868px;">ITEM 28</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 899px;">ITEM 29</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 930px;">ITEM 30</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 961px;">ITEM 31</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 992px;">ITEM 32</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1023px;">ITEM 33</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1054px;">ITEM 34</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1085px;">ITEM 35</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1116px;">ITEM 36</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1147px;">ITEM 37</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1178px;">ITEM 38</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1209px;">ITEM 39</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1240px;">ITEM 40</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1271px;">ITEM 41</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1302px;">ITEM 42</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1333px;">ITEM 43</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1364px;">ITEM 44</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1395px;">ITEM 45</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1426px;">ITEM 46</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1457px;">ITEM 47</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1488px;">ITEM 48</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1519px;">ITEM 49</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1550px;">ITEM 50</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1581px;">ITEM 51</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1612px;">ITEM 52</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1643px;">ITEM 53</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1674px;">ITEM 54</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1705px;">ITEM 55</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1736px;">ITEM 56</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1767px;">ITEM 57</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1798px;">ITEM 58</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1829px;">ITEM 59</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1860px;">ITEM 60</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1891px;">ITEM 61</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1922px;">ITEM 62</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1953px;">ITEM 63</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 1984px;">ITEM 64</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 2015px;">ITEM 65</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 2046px;">ITEM 66</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 2077px;">ITEM 67</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 2108px;">ITEM 68</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 2139px;">ITEM 69</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 2170px;">ITEM 70</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 2201px;">ITEM 71</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 2232px;">ITEM 72</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 2263px;">ITEM 73</div><div id="list_rows" class="vrow" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: red; position: absolute; top: 2294px;">ITEM 74</div></div><div class="slimScrollBar" style="width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px; height: 258.444492254733px; background: rgb(0, 0, 0);"></div><div class="slimScrollRail" style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; opacity: 0.2; z-index: 90; right: 1px; background: rgb(51, 51, 51);"></div></div>
+
+
+ 
+   <script>
+ $(function(){
+    $('#collapse_list').slimScroll({
+      height: 'auto',
+      width:'250px'
+        });
+});
+     
+</script>
+
+  <div id="w" class="container-fluid">
+    <div id="content">
+
+      <nav id="stickynav">
+        <ul id="nav" class="clearfix">
+          <li><a class="nva" href="file:///C:/Users/yashnabowen/Documents/introHCI2/FLE-frontend-interview-test/index.html#topbar">Intro</a></li>
+          <li><a class="nva" href="file:///C:/Users/yashnabowen/Documents/introHCI2/FLE-frontend-interview-test/index.html#about">Things we are looking for</a></li>
+          <li><a class="nva" href="file:///C:/Users/yashnabowen/Documents/introHCI2/FLE-frontend-interview-test/index.html#photos">End</a></li>
+        </ul>
+      </nav>
+      <h1>FLE front-end test</h1>
+      
+      <p>We want our platform to look good, run fast!</p>
+
+      <p>To achieve this, requires a lot of efforts on designing awesome UI/UX and writing inspiring code.</p>
+
+      <p id="thistest">As a front-end developer, we expect you to already know a fair amount of JS, HTML, CSS, and some Bootstrap, JS framework, web dev tools. But most importantly, we are looking for someone who are earger to learn and persue pefection.</p>
+      
+      <p>You may find the following references helpfull for this test:</p>
+        <a href="http://getbootstrap.com/components/"> -- Bootstrap for beauty</a>. <p></p>
+        <a href="http://rocha.la/jQuery-slimScroll"> -- How to use slimScroll</a>. <p></p>
+        <a href="https://developer.chrome.com/devtools/docs/network"> -- Benchmarking/Profiling you website</a>. <p></p>
+        <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/"> -- Critical Rendering Path for optimizing website loading process</a>. <p></p>
+        <a href="https://www.youtube.com/watch?v=FZSjvWtUxYk"> -- Backbone for beginners</a>. <p></p>
+      <p>Let's start the game!</p>
+        
+      <section id="about" class="section">
+        <br><br>
+        <h1>Tasks</h1>
+        <p class="glyphicon glyphicon-star" style="float:left; padding-right: 10px"></p><p>Try to beautify the scrolling list on the left. Bootstrap is already loaded for you, but feel free to add other resources as you need. (please do not delete any existing resources)</p>
+        
+        <p class="glyphicon glyphicon-star" style="float:left; padding-right: 10px"></p><p>Try to make the scrolling list resize as the windows resized.</p>   
+
+        <p class="glyphicon glyphicon-star" style="float:left; padding-right: 10px"></p><p>Try to create a handle/tab attached to the scrolling list, when it is clicked, displays or hides the list accordingly.</p>
+
+        <p class="glyphicon glyphicon-star" style="float:left; padding-right: 10px"></p><p>Try to replace the default scrolling bar of the list with slimScroll that is already loaded for you. You can directly use it and there is a reference above show you how.</p>
+
+        <p class="glyphicon glyphicon-star" style="float:left; padding-right: 10px"></p><p>Try to profiling the overall loading speed of your site(there is a reference above show you how to use Chrome dev tool for profiling) and put the result along with your analysis here: </p>
+
+        <p class="glyphicon glyphicon-star" style="float:left; padding-right: 10px"></p><p>Try to optimize the critical rendering path in order to improve the overall loading speed of your site and put the result along with your reasoning here: </p>
+
+        <p class="glyphicon glyphicon-star-empty" style="float:left; padding-right: 10px"></p><p>This is optional. Backbonify the scrolling list.</p>
+
+        <br><br>
+        <p style="font-size:1.2em;">You can skip some of the tasks if it consumes too much time. But please finish as many tasks as you can.</p>
+        <br><br>
+      </section>
+    
+      <section id="photos" class="section">
+        <br><br>
+        <h1>You made it!</h1>
+        <p>Please send a copy or link of your source code to us via this email: eli@learningequality.org</p>
+        <img src="./FLE Interview Test_ font-end_files/kaka.jpg">
+      </section>
+    </div>
+    <br><br><br><br><br><br> 
+  </div><!-- @end #content -->
+
+  <script type="text/javascript">
+    $(function(){
+      $("#nav a").click(function(e){
+        e.preventDefault();
+        $('html,body').scrollTo(this.hash,this.hash); 
+      });
+    });
+  </script>
+
+
+
+</body></html>

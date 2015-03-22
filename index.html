@@ -20,37 +20,11 @@
   
   
   <div id="topbar">
+    <button type="button" id= "list_button" class="btn btn-default dropdown-toggle">Toggle List Visibility</button>
     <a href="https://learningequality.org/about/values/">LearningEquality</a>
-  </div>
 
-<div id = "scrolling">
-
-
-<script type="text/javascript">
-
-        var list = new VirtualList({
-      w: window.innerWidth/6,
-      h: window.innerHeight,
-      itemHeight: 31,
-      totalRows: 10000,
-
-      generatorFn: function(row) {
-        var el = document.createElement("div");
-        el.innerHTML = "ITEM " + row;
-        el.style.borderBottom = "1px solid red";
-        el.style.position = "absolute";
-        return el;
-      }
-    });
-    
-    document.body.appendChild(list.container);
  
-
-  </script>
- <button type="button" id= "list_button"class="btn btn-default">View Scrollable List</button>
   <script type="text/javascript">
-
-
   var buttonL = document.getElementById('list_button'); // Assumes element with id='button'
 
   buttonL.onclick = function() {
@@ -63,34 +37,12 @@
         div.style.display = 'block';
     }
 };
-
-("#buttonL").click(function() { 
-    // assumes element with id='button'
-    $("#newpost").toggle();
-});
-
-
-  </script> 
-</div>
-
-
-<!--<script type="text/javascript">
- $(function(){
-      $('#scrolling').slimScroll({
-        color: '#00f',
-    alwaysVisible: true
-    });
-})
-   
 </script>
-   
- -->
-  <div id="w" class ="container-fluid">
-    <div id = "list_column" >
-       
-    </div>
-    <div id="content">
 
+  </div>
+
+   <div id="w">
+    <div id="content">
       <nav id="stickynav">
         <ul id="nav" class="clearfix">
           <li><a class="nva" href="#topbar">Intro</a></li>
@@ -144,6 +96,36 @@
       </section>
     </div>
     <br><br><br><br><br><br> 
+    <script type="text/javascript">
+
+ 
+$(function(){    $('#collapse_list').slimScroll({
+      height: 'auto',
+      width:'20em'
+        });
+});
+
+
+
+        var list = new VirtualList({
+      w: window.innerWidth/6,
+      h: window.innerHeight,
+      itemHeight: 31,
+      totalRows: 10000,
+
+      generatorFn: function(row) {
+        var el = document.createElement("div");
+        el.innerHTML = "ITEM " + row;
+        el.id= "list_rows"
+        el.style.borderBottom = "1px solid red";
+        el.style.position = "absolute";
+        return el;
+      }
+    });
+    
+    document.body.appendChild(list.container);
+ </script>
+</div>
   </div><!-- @end #content -->
 
   <script type="text/javascript">
