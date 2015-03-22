@@ -18,33 +18,23 @@
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/jquery.slimscroll.min.js"></script>
   
-  
-  <div id="topbar">
-    <button type="button" id= "list_button" class="btn btn-default dropdown-toggle">
 
-<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-    </button>
+  <div id="topbar">
+  <button type="button" id= "list_button" class="btn btn-default dropdown-toggle">
+    <span class="glyphicon glyphicon-list" aria-hidden="true"></span></button>
     <a href="https://learningequality.org/about/values/">LearningEquality</a>
 
- 
   <script type="text/javascript">
   var buttonL = document.getElementById('list_button'); // Assumes element with id='button'
-
   buttonL.onclick = function() {
-
-    var div = document.getElementById('collapse_list');
-    if (div.style.display !== 'none') {
-        div.style.display = 'none';
-    }
-    else {
-        div.style.display = 'block';
-    }
-};
-</script>
-
+  var div = document.getElementById('collapse_list');
+  if (div.style.display !== 'none') {div.style.display = 'none';}
+    else {div.style.display = 'block';}};
+  </script>
   </div>
 
-   <div id="w">
+
+  <div id="w">
     <div id="content">
       <nav id="stickynav">
         <ul id="nav" class="clearfix">
@@ -62,11 +52,11 @@
       <p>As a front-end developer, we expect you to already know a fair amount of JS, HTML, CSS, and some Bootstrap, JS framework, web dev tools. But most importantly, we are looking for someone who are earger to learn and persue pefection.</p>
       
       <p>You may find the following references helpfull for this test:</p>
-        <a href="http://getbootstrap.com/components/"> -- Bootstrap for beauty</a>. </p>
-        <a href="http://rocha.la/jQuery-slimScroll"> -- How to use slimScroll</a>. </p>
-        <a href="https://developer.chrome.com/devtools/docs/network"> -- Benchmarking/Profiling you website</a>. </p>
-        <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/"> -- Critical Rendering Path for optimizing website loading process</a>. </p>
-        <a href="https://www.youtube.com/watch?v=FZSjvWtUxYk"> -- Backbone for beginners</a>. </p>
+       <a href="http://getbootstrap.com/components/"> -- Bootstrap for beauty</a>. </p>
+       <a href="http://rocha.la/jQuery-slimScroll"> -- How to use slimScroll</a>. </p>
+       <a href="https://developer.chrome.com/devtools/docs/network"> -- Benchmarking/Profiling you website</a>. </p>
+       <a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/"> -- Critical Rendering Path for optimizing website loading process</a>
+      </p><a href="https://www.youtube.com/watch?v=FZSjvWtUxYk"> -- Backbone for beginners</a></p>
       <p>Let's start the game!</p>
         
       <section id="about" class="section">
@@ -80,11 +70,16 @@
 
         <p class="glyphicon glyphicon-star" style="float:left; padding-right: 10px"></p><p>Try to replace the default scrolling bar of the list with slimScroll that is already loaded for you. You can directly use it and there is a reference above show you how.</p>
 
-        <p class="glyphicon glyphicon-star" style="float:left; padding-right: 10px"></p><p>Try to profiling the overall loading speed of your site(there is a reference above show you how to use Chrome dev tool for profiling) and put the result along with your analysis here: </p>
+        <p class="glyphicon glyphicon-star" style="float:left; padding-right: 10px"></p><p>Try to profiling the overall loading speed of your site(there is a reference above show you how to use Chrome dev tool for profiling) and put the result along with your analysis here: 
+        <br>When using the Timeline in Chrome Dev Tools and recording a reload of the page the results show that most of the time in the critical rendering path is running the scripting the largest time taken by the file jquery.min.js. The loading and and rendering are fairly average while html parsing takes aroun 9 ms.
+        <br></p>
+        <p><a href="https://drive.google.com/folderview?id=0B9rM0xudnoHNfnVFSmY0eHZvMEpOdi1PMF92OVBVbGE0RFQ5eU1odk82YzB0RjluX2x3eUk&usp=sharing"> Folder with result screenshots (didnt want to load an image into the html)</a>
+        </p>
 
-        <p class="glyphicon glyphicon-star" style="float:left; padding-right: 10px"></p><p>Try to optimize the critical rendering path in order to improve the overall loading speed of your site and put the result along with your reasoning here: </p>
+        <p class="glyphicon glyphicon-star" style="float:left; padding-right: 10px"></p><p>Try to optimize the critical rendering path in order to improve the overall loading speed of your site and put the result along with your reasoning here:
 
-        <p class="glyphicon glyphicon-star-empty" style="float:left; padding-right: 10px"></p><p>This is optional. Backbonify the scrolling list.</p>
+        <br>Since the javascript was creating most of the bottleneck - I made sure to minify all the javascript files. This brought up the fps rate a lot according to the timeline. While looking at tutorials online, it was suggested to load some javascript files asynchronously but I did not do that as it compromised loading some of the elements. I also took out a lot of redundant css formatting that was making the elements heavier specially some of the extra code I had added in base_styles.Optimized image in same folder link above<br></p>
+        <p class="glyphicon glyphicon-star-empty" style="float:left; padding-right: 10px"></p><p>This is optional. Backbonify the scrolling list. In the end, minifying the css brought down the time further.</p>
 
         <br><br>
         <p style="font-size:1.2em;">You can skip some of the tasks if it consumes too much time. But please finish as many tasks as you can.</p>
@@ -98,20 +93,13 @@
         <img src="img/kaka.jpg">
       </section>
     </div>
-    <br><br><br><br><br><br> 
+    <br><br>
+   
     <script type="text/javascript">
+    $(function(){ $('#collapse_list').slimScroll({
+      height: 'auto',color: "#888888",width:'20em'});});
 
- 
-$(function(){ $('#collapse_list').slimScroll({
-      height: 'auto',
-      color: "#ffffff",
-      width:'20em',
-        });
-});
-
-
-
-        var list = new VirtualList({
+      var list = new VirtualList({
       w: window.innerWidth,
       h: window.innerHeight,
       itemHeight: 31,
@@ -120,16 +108,14 @@ $(function(){ $('#collapse_list').slimScroll({
       generatorFn: function(row) {
         var el = document.createElement("div");
         el.innerHTML = "ITEM " + row;
-        el.id= "list_rows"
+        el.id= "list_rows";
+        el.className= "container_fluid";
         el.style.borderBottom = "1px solid red";
         el.style.position = "absolute";
-        return el;
-      }
-    });
-    
-    document.body.appendChild(list.container);
- </script>
-</div>
+        return el;}  });
+       document.body.appendChild(list.container);
+      </script>
+    </div>
   </div><!-- @end #content -->
 
   <script type="text/javascript">
