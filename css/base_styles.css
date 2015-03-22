@@ -1,4 +1,5 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, 
+img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, 
 var, b, u, i, center, dl, dt, 
 dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, 
 embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
@@ -68,7 +69,7 @@ strong { font-weight: bold; }
 table { border-collapse: collapse; border-spacing: 0; }
 img { border: 0; max-width: 100%; }
 
-#topbar {
+#topbar{
   background: #4f4a41;
    text-align: center;
   height: 36px;
@@ -77,11 +78,11 @@ img { border: 0; max-width: 100%; }
   -moz-transition: height 0.5s linear;
   transition: height 0.5s linear;
 }
+
+
 #topbar a {
-  color: #fff;
-  padding-top: 10px;
+  color: #ffffff;
   font-size:1.3em;
-  line-height: 1.25em;
   text-decoration: none;
   opacity: 0.5;
   font-weight: bold;
@@ -98,7 +99,7 @@ img { border: 0; max-width: 100%; }
 }
 
 #stickynav #nav { position: relative; z-index: 9999; }
-#stickynav #nav li { display: inline; }
+#stickynav #nav li { display: inline; text-align: center;}
 #stickynav #nav li a {
   display: block;
   float: left;
@@ -121,10 +122,6 @@ img { border: 0; max-width: 100%; }
   color: #000;
 }
 
-#list-column
-{
-float: left;
-}
 .section {
   padding-top: 90px;
 }
@@ -165,6 +162,7 @@ h1 > span {
   display: inline-block;
   vertical-align: middle;
   white-space: normal;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 
@@ -204,7 +202,9 @@ a:hover { text-decoration: underline; }
   width: 90%;
   margin: auto;
   height: 100%;
-  padding: 5%;
+  padding-left:  10%;
+  padding-right: 10%;
+  padding-top: 2%;
   float: right;
   position: absolute;
 }
@@ -213,7 +213,9 @@ a:hover { text-decoration: underline; }
 #content {
   width: 85%;
   background: #fff;
-  padding: 10%;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
   float: right;
   padding-bottom: 35px;
   position: relative; 
@@ -222,26 +224,49 @@ a:hover { text-decoration: underline; }
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
 #list_button {
-  width: 12.5%;
-  position: relative;
+ background: #4f4a41;
+   text-align: center;
+  height: 36px;
+  overflow: hidden;
+
+  width: 3%;
+  color: white;
+  text-align: left;
   float: left;
+  border: none;
+}
+#list_button:hover
+{
+  background-color: #88AA88;
 }
 #slimScrollDiv
 {
- width: 30%;
+ width: 15%;
 }
 #collapse-list
 {
   padding-top: 25%;
   height: 90%;
-  width: 40%;
+  width: 100%;
   float: left;
 }
 
 #list_rows 
 {
-  border-radius: 5px;
-  box-shadow:#777777;
+  color: #E6E6E6;
+  text-decoration: none;
+  margin-right: 10px;
+
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+ 
+  box-shadow: 0 1px 0px rgba(255,255,255,0.1) inset;
+  
+  background-color: black;
+  border: none;
+  
+  padding-top: 2%;
+  padding-left: 2%;
+  vertical-align: botto
 }
 
 #list_rows:hover

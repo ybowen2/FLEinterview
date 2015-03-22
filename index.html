@@ -20,7 +20,10 @@
   
   
   <div id="topbar">
-    <button type="button" id= "list_button" class="btn btn-default dropdown-toggle">Toggle List Visibility</button>
+    <button type="button" id= "list_button" class="btn btn-default dropdown-toggle">
+
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+    </button>
     <a href="https://learningequality.org/about/values/">LearningEquality</a>
 
  
@@ -45,9 +48,9 @@
     <div id="content">
       <nav id="stickynav">
         <ul id="nav" class="clearfix">
-          <li><a class="nva" href="#topbar">Intro</a></li>
-          <li><a class="nva" href="#about">Things we are looking for</a></li>
-          <li><a class="nva" href="#photos">End</a></li>
+          <li><a class="btn btn-default" href="#topbar">Intro</a></li>
+          <li><a class="btn btn-default" href="#about">Things we are looking for</a></li>
+          <li><a class="btn btn-default" href="#photos">End</a></li>
         </ul>
       </nav>
       <h1>FLE front-end test</h1>
@@ -99,16 +102,17 @@
     <script type="text/javascript">
 
  
-$(function(){    $('#collapse_list').slimScroll({
+$(function(){ $('#collapse_list').slimScroll({
       height: 'auto',
-      width:'20em'
+      color: "#ffffff",
+      width:'20em',
         });
 });
 
 
 
         var list = new VirtualList({
-      w: window.innerWidth/6,
+      w: window.innerWidth,
       h: window.innerHeight,
       itemHeight: 31,
       totalRows: 10000,
